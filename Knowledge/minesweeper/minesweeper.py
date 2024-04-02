@@ -227,14 +227,7 @@ class MinesweeperAI():
                self.knowledge.append(new_sentence_subset)
 
     def make_safe_move(self):
-        """
-        Returns a safe cell to choose on the Minesweeper board.
-        The move must be known to be safe, and not already a move
-        that has been made.
-
-        This function may use the knowledge in self.mines, self.safes
-        and self.moves_made, but should not modify any of those values.
-        """
+        
         for cell in self.safes:
             if cell not in self.moves_made:
                 return cell
